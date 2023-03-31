@@ -177,6 +177,7 @@ object HomeFeatures {
   }
   object CachedScoredTweetsFeature extends Feature[PipelineQuery, Seq[hmt.CachedScoredTweet]]
   object DDGStatsElonFeature extends Feature[PipelineQuery, Long]
+  object DDGStatsAaronFeature extends Feature[PipelineQuery, Long]
   object DDGStatsVitsFeature extends Feature[PipelineQuery, Set[Long]]
   object DDGStatsDemocratsFeature extends Feature[PipelineQuery, Set[Long]]
   object DDGStatsRepublicansFeature extends Feature[PipelineQuery, Set[Long]]

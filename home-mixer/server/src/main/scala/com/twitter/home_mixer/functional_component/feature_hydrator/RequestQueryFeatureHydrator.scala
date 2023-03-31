@@ -39,6 +39,7 @@ class RequestQueryFeatureHydrator[
     DDGStatsDemocratsFeature,
     DDGStatsRepublicansFeature,
     DDGStatsElonFeature,
+    DDGStatsAaronFeature,
     DDGStatsVitsFeature,
     DeviceLanguageFeature,
     GetInitialFeature,
@@ -62,6 +63,7 @@ class RequestQueryFeatureHydrator[
   private val Democrats = "democrats"
   private val Republicans = "republicans"
   private val Elon = "elon"
+  private val Aaron = "Aaron"
   private val Vits = "vits"
 
   // Convert Language code to ISO 639-3 format
@@ -93,6 +95,7 @@ class RequestQueryFeatureHydrator[
       .add(DDGStatsRepublicansFeature, ddgStatsAuthors.longSeq(Republicans).toSet)
       .add(DDGStatsVitsFeature, ddgStatsAuthors.longSeq(Vits).toSet)
       .add(DDGStatsElonFeature, ddgStatsAuthors.longValue(Elon))
+      .add(DDGStatsAaronFeature, ddgStatsAuthors.longValue(Aaron))
       .add(DeviceLanguageFeature, query.getLanguageCode.map(getLanguageISOFormatByCode))
       .add(
         GetInitialFeature,
